@@ -64,48 +64,49 @@ class _MyAppCounter extends State<CardExampleApp> {
               ],
             ),
             Row (
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Card(
-              clipBehavior: Clip.hardEdge,
-              child: InkWell(
-              splashColor: Colors.blue.withAlpha(30),
-              onTap: () {
-                debugPrint('Card tapped.');
-              },
-              child: const SizedBox(
-              width: 300,
-              height: 100,
-              child: Text('Aumentar'),
-            ),
-            ),
-            ),
-            Card(
-              clipBehavior: Clip.hardEdge,
-              color: Colors.red,
-              child: InkWell(
-              splashColor: Colors.blue.withAlpha(30),
-              onTap: () {
-                debugPrint('Card tapped.');
-              },
-              child: const SizedBox(
-              width: 300,
-              height: 100,
-              child: Text('Aumentar'),
-            ),
-            ),
-            ),
-            ],
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                const Card(
+                  child: Column(
+                    children: [
+                      Text("3"),
+                      Row(
+                        children: [
+                          TextButton(
+                            onPressed: null,
+                            child: Text("Aumentar"),
+                          )
+                        ],
+                      )
+                    ],
+                ),
+                ),
+                const Card(
+                  child: Column(
+                    children: [
+                      Text("5"),
+                      Row(
+                        children: [
+                          TextButton(
+                            onPressed: null,
+                            child: Text("Aumentar"),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ],
             )
-            ] 
-            ),
+            ]
           ),
         ),
-      );
+      ),
+    );
   }
 }
 
-class CardExample extends StatelessWidget {
+/*class CardExample extends StatelessWidget {
   const CardExample({super.key});
 
   @override
@@ -127,4 +128,4 @@ class CardExample extends StatelessWidget {
       ),
     );
   }
-}
+}*/
