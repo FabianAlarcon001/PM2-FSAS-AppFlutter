@@ -62,7 +62,7 @@ class _MyAppCounter extends State<CardExampleApp> {
                           TextButton(
                             onPressed: () {
                               setState(() {
-                                counter2++;
+                                counter2 += 2;
                               });
                             },
                             child: Text("Aumentar"),
@@ -86,7 +86,7 @@ class _MyAppCounter extends State<CardExampleApp> {
                           TextButton(
                             onPressed: () {
                               setState(() {
-                                counter3++;
+                                counter3 += 3;
                               });
                             },
                             child: Text("Aumentar"),
@@ -105,7 +105,7 @@ class _MyAppCounter extends State<CardExampleApp> {
                           TextButton(
                             onPressed: () {
                               setState(() {
-                                counter5++;
+                                counter5 += 5;
                               });
                             },
                             child: Text("Aumentar"),
@@ -125,16 +125,16 @@ class _MyAppCounter extends State<CardExampleApp> {
           child: Icon(Icons.reset_tv),
           onPressed: () {
               setState(() {
-                counter1 = 0;
+                counter1 = 1;
               });
               setState(() {
-                counter2 = 0;
+                counter2 = 2;
               });
               setState(() {
-                counter3 = 0;
+                counter3 = 3;
               });
               setState(() {
-                counter5 = 0;
+                counter5 = 5;
               });
             },
         ),
