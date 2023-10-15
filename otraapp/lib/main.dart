@@ -13,7 +13,10 @@ class CardExampleApp extends StatefulWidget {
 
 class _MyAppCounter extends State<CardExampleApp> {
 
-  int counter = 1;
+  int counter1 = 1;
+  int counter2 = 2;
+  int counter3 = 3;
+  int counter5 = 5;
 
   @override
   Widget build(BuildContext context) {
@@ -31,14 +34,18 @@ class _MyAppCounter extends State<CardExampleApp> {
             Row (
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                const Card(
+                Card(
                   child: Column(
                     children: [
-                      Text("1"),
+                      Text('$counter1'),
                       Row(
                         children: [
                           TextButton(
-                            onPressed: null,
+                            onPressed: () {
+                              setState(() {
+                                counter1++;
+                              });
+                            },
                             child: Text("Aumentar"),
                           )
                         ],
@@ -46,14 +53,18 @@ class _MyAppCounter extends State<CardExampleApp> {
                     ],
                 ),
                 ),
-                const Card(
+                Card(
                   child: Column(
                     children: [
-                      Text("2"),
+                      Text('$counter2'),
                       Row(
                         children: [
                           TextButton(
-                            onPressed: null,
+                            onPressed: () {
+                              setState(() {
+                                counter2++;
+                              });
+                            },
                             child: Text("Aumentar"),
                           )
                         ],
@@ -66,29 +77,37 @@ class _MyAppCounter extends State<CardExampleApp> {
             Row (
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                const Card(
+                Card(
                   child: Column(
                     children: [
-                      Text("3"),
+                      Text('$counter3'),
                       Row(
                         children: [
                           TextButton(
-                            onPressed: null,
+                            onPressed: () {
+                              setState(() {
+                                counter3++;
+                              });
+                            },
                             child: Text("Aumentar"),
                           )
                         ],
                       )
                     ],
+                  ),
                 ),
-                ),
-                const Card(
+                Card(
                   child: Column(
                     children: [
-                      Text("5"),
+                      Text('$counter5'),
                       Row(
                         children: [
                           TextButton(
-                            onPressed: null,
+                            onPressed: () {
+                              setState(() {
+                                counter5++;
+                              });
+                            },
                             child: Text("Aumentar"),
                           )
                         ],
@@ -97,9 +116,27 @@ class _MyAppCounter extends State<CardExampleApp> {
                   ),
                 ),
               ],
-            )
-            ]
+            ),
+            ],
           ),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.reset_tv),
+          onPressed: () {
+              setState(() {
+                counter1 = 0;
+              });
+              setState(() {
+                counter2 = 0;
+              });
+              setState(() {
+                counter3 = 0;
+              });
+              setState(() {
+                counter5 = 0;
+              });
+            },
         ),
       ),
     );
