@@ -24,7 +24,22 @@ class _MyAppCounter extends State<CardExampleApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Contadores'),
+          title: Column(
+            children: [
+                Text(
+                'AppCounter',
+                  style: TextStyle(
+                    fontSize: 30,
+                  ),
+                ),
+                Icon(
+                  Icons.pin,
+                  size: 30
+                ,),
+                SizedBox(height: 1),
+            ],
+          ),
+          centerTitle: true,
           elevation: 10,
         ),
         body: Center(
@@ -35,9 +50,16 @@ class _MyAppCounter extends State<CardExampleApp> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Card(
+                color: Color.fromARGB(255, 226, 227, 227),
                   child: Column(
                     children: [
-                      Text('$counter1'),
+                      Text(
+                        '$counter1',
+                        style: TextStyle(
+                        fontSize: 40,
+                        color: Colors.deepOrange // Tamaño de fuente deseado
+                        ),
+                      ),
                       Row(
                         children: [
                           TextButton(
@@ -46,7 +68,7 @@ class _MyAppCounter extends State<CardExampleApp> {
                                 counter1++;
                               });
                             },
-                            child: Text("Aumentar"),
+                            child: Text("Click para aumentar!!"),
                           )
                         ],
                       )
@@ -54,9 +76,16 @@ class _MyAppCounter extends State<CardExampleApp> {
                 ),
                 ),
                 Card(
+                color: Color.fromARGB(255, 226, 227, 227),
                   child: Column(
                     children: [
-                      Text('$counter2'),
+                      Text(
+                        '$counter2',
+                        style: TextStyle(
+                        fontSize: 40, 
+                        color: Colors.deepOrange// Tamaño de fuente deseado
+                        ),
+                      ),
                       Row(
                         children: [
                           TextButton(
@@ -65,7 +94,7 @@ class _MyAppCounter extends State<CardExampleApp> {
                                 counter2 += 2;
                               });
                             },
-                            child: Text("Aumentar"),
+                            child: Text("Click para aumentar!!"),
                           )
                         ],
                       )
@@ -78,9 +107,16 @@ class _MyAppCounter extends State<CardExampleApp> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Card(
+                color: Color.fromARGB(255, 226, 227, 227),
                   child: Column(
                     children: [
-                      Text('$counter3'),
+                      Text(
+                        '$counter3',
+                        style: TextStyle(
+                        fontSize: 40,
+                        color: Colors.deepOrange // Tamaño de fuente deseado
+                        ),
+                      ),
                       Row(
                         children: [
                           TextButton(
@@ -89,7 +125,7 @@ class _MyAppCounter extends State<CardExampleApp> {
                                 counter3 += 3;
                               });
                             },
-                            child: Text("Aumentar"),
+                            child: Text("Click para aumentar!!")
                           )
                         ],
                       )
@@ -97,9 +133,16 @@ class _MyAppCounter extends State<CardExampleApp> {
                   ),
                 ),
                 Card(
+                color: Color.fromARGB(255, 226, 227, 227),
                   child: Column(
                     children: [
-                      Text('$counter5'),
+                      Text(
+                        '$counter5',
+                        style: TextStyle(
+                        fontSize: 40,
+                        color: Colors.deepOrange// Tamaño de fuente deseado
+                        ),
+                      ),
                       Row(
                         children: [
                           TextButton(
@@ -108,7 +151,7 @@ class _MyAppCounter extends State<CardExampleApp> {
                                 counter5 += 5;
                               });
                             },
-                            child: Text("Aumentar"),
+                            child: Text("Click para aumentar!!"),
                           )
                         ],
                       )
@@ -122,7 +165,12 @@ class _MyAppCounter extends State<CardExampleApp> {
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.reset_tv),
+          child:
+          Icon(
+          Icons.replay,
+          color: Colors.white,
+          size: 40,
+          ),
           onPressed: () {
               setState(() {
                 counter1 = 1;
@@ -156,13 +204,5 @@ class _MyAppCounter extends State<CardExampleApp> {
           onTap: () {
             debugPrint('Card tapped.');
           },
-          child: const SizedBox(
-            width: 300,
-            height: 100,
-            child: Text('Aumentar'),
-          ),
-        ),
-      ),
-    );
-  }
+          child: cons
 }*/
