@@ -5,7 +5,7 @@ void main() {
 }
 
 class CardExampleApp extends StatefulWidget {
-  CardExampleApp({super.key});
+  const CardExampleApp({super.key});
 
   @override
   State<CardExampleApp> createState() => _MyAppCounter();
@@ -24,7 +24,7 @@ class _MyAppCounter extends State<CardExampleApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Column(
+          title: const Column(
             children: [
                 Text(
                 'AppCounter',
@@ -50,12 +50,12 @@ class _MyAppCounter extends State<CardExampleApp> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Card(
-                color: Color.fromARGB(255, 226, 227, 227),
+                color: const Color.fromARGB(255, 226, 227, 227),
                   child: Column(
                     children: [
                       Text(
                         '$counter1',
-                        style: TextStyle(
+                        style: const TextStyle(
                         fontSize: 40,
                         color: Colors.deepOrange // Tamaño de fuente deseado
                         ),
@@ -68,7 +68,7 @@ class _MyAppCounter extends State<CardExampleApp> {
                                 counter1++;
                               });
                             },
-                            child: Text("Click para aumentar!!"),
+                            child: const Text("Click para aumentar!!"),
                           )
                         ],
                       )
@@ -76,12 +76,12 @@ class _MyAppCounter extends State<CardExampleApp> {
                 ),
                 ),
                 Card(
-                color: Color.fromARGB(255, 226, 227, 227),
+                color: const Color.fromARGB(255, 226, 227, 227),
                   child: Column(
                     children: [
                       Text(
                         '$counter2',
-                        style: TextStyle(
+                        style: const TextStyle(
                         fontSize: 40, 
                         color: Colors.deepOrange// Tamaño de fuente deseado
                         ),
@@ -94,7 +94,7 @@ class _MyAppCounter extends State<CardExampleApp> {
                                 counter2 += 2;
                               });
                             },
-                            child: Text("Click para aumentar!!"),
+                            child: const Text("Click para aumentar!!"),
                           )
                         ],
                       )
@@ -107,12 +107,12 @@ class _MyAppCounter extends State<CardExampleApp> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Card(
-                color: Color.fromARGB(255, 226, 227, 227),
+                color: const Color.fromARGB(255, 226, 227, 227),
                   child: Column(
                     children: [
                       Text(
                         '$counter3',
-                        style: TextStyle(
+                        style: const TextStyle(
                         fontSize: 40,
                         color: Colors.deepOrange // Tamaño de fuente deseado
                         ),
@@ -125,7 +125,7 @@ class _MyAppCounter extends State<CardExampleApp> {
                                 counter3 += 3;
                               });
                             },
-                            child: Text("Click para aumentar!!")
+                            child: const Text("Click para aumentar!!")
                           )
                         ],
                       )
@@ -133,12 +133,12 @@ class _MyAppCounter extends State<CardExampleApp> {
                   ),
                 ),
                 Card(
-                color: Color.fromARGB(255, 226, 227, 227),
+                color: const Color.fromARGB(255, 226, 227, 227),
                   child: Column(
                     children: [
                       Text(
                         '$counter5',
-                        style: TextStyle(
+                        style: const TextStyle(
                         fontSize: 40,
                         color: Colors.deepOrange// Tamaño de fuente deseado
                         ),
@@ -151,7 +151,7 @@ class _MyAppCounter extends State<CardExampleApp> {
                                 counter5 += 5;
                               });
                             },
-                            child: Text("Click para aumentar!!"),
+                            child: const Text("Click para aumentar!!"),
                           )
                         ],
                       )
@@ -166,7 +166,7 @@ class _MyAppCounter extends State<CardExampleApp> {
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: FloatingActionButton(
           child:
-          Icon(
+          const Icon(
           Icons.replay,
           color: Colors.white,
           size: 40,
